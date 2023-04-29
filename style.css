@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-white: #fff;
+    --color-primary: #0071c5;
+    --color-secondary: #0010c5c5;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.btn{
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-primary)
+}
+
+.btn:hover{
+    background-color: var(--color-secondary);
+}
+
+.passwordContainer{
+    max-width: 600px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06),
+                -10px -10px 30px rgba(0, 0, 0, 0.06);
+    background-color: var(--color-white);
+    margin: 1.2rem;
+}
+
+.passwordContainer .header{
+    background-color: var(--color-primary);
+    padding: 1rem 1.5rem;
+    color: var(--color-white);
+}
+
+.passwordContainer .contentBx{
+    padding: 1rem;
+}
+
+.mainHeading{
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+}
+
+input[type="text"]{
+    width: 90%;
+    min-height: 50px;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+input[type="text"]::placeholder{
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+input[type='number']{
+    width: 50px;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.passwordContainer .passwordBx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    padding: 0.54rem;
+    margin: 2rem 0;
+    color: var(--color-white);
+    
+}
+
+.passwordContainer .passwordBx i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.configuationBx{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.configuationBx .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .wrapper .switchWrap .switch{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+
+.switch input {
+    display:none;
+}
+   
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: var(--color-primary);
+    transition: .4s;
+}
+   
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+input:checked + .slider{
+    background-color: var(--color-secondary);
+}
+
+@media(max-width: 768px){
+    .passwordContainer .header h1{
+        font-size: 1.6rem;
+        white-space: nowrap;
+    }
+
+}

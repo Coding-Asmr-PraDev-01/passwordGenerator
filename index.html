@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator using Html, Css and JavaScript</title>
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />   
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="passwordContainer">
+        <div class="header">
+            <h1>Password Generator</h1>
+        </div>
+        <div class="contentBx">
+            <p class="mainHeading">Generate a Password</p>
+            <p class="text">Let our application create a very strong password for you and that can copy and use it anywhere to <b>remain Protected.</b> </p>
+        
+            <div class="passwordTextBx">
+                <div class="passwordBx">
+                    <input type="text" placeholder="Here the password will appear" class="passwordOutput" disabled/>
+                    <div class="copyBtn">
+                        <i class='bx bx-copy'  ></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="configuationBx">
+                <div class="box">
+                    <span>Password Length</span>
+                    <input type="number" class="passwordLen">
+                </div>
+                <div class="box">
+                    <span>Include Letters</span>
+                    <div align = "center" id = "box">
+                        <label class = "switch">
+                        <input type = "checkbox" class="includeLetters">
+                        <div class = "slider round"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <span>Include Numbers</span>
+                    <div align = "center" id = "box">
+                        <label class = "switch">
+                        <input type = "checkbox" class="includeNumbers">
+                        <div class = "slider round"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <span>Include Special Characters</span>
+                    <div align = "center" id = "box">
+                        <label class = "switch">
+                        <input type = "checkbox" class="includeSpecialChars">
+                        <div class = "slider round"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <span>Include Capitals</span>
+                    <div align = "center" id = "box">
+                        <label class = "switch">
+                        <input type = "checkbox" class="includeCapitals">
+                        <div class = "slider round"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn">Generate</a>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
